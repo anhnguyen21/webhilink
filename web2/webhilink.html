@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>Ẩm Thực</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+	<script src="cart.js"></script>
+</head>
+<body>
+	<div class="top">
+		<div class="flex">
+			<div class="top_left"><i class="fas fa-mobile-alt"></i> Điện thoại: 0329.488.708&nbsp&nbsp&nbsp&nbsp
+				<i class="far fa-envelope"></i> Email: anh@gmail.com</div>
+			<div class="top_right"><i class="far fa-user"></i></i> Đăng nhập-Đăng ký </div>
+		</div>
+	</div>
+	<div class="header">
+		<div class="flex">
+			<div><img src="http://at01.chonweb.vn/wp-content/uploads/2019/07/logo-halinkvn.png"></div>
+			<div class="flex_head">
+				<div><img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/policy1-0x0.png"></div>
+				<div>Miễn phí vận chuyển<br>Bán kính 5 km</div>
+			</div>
+			<div class="flex_head">
+				<div><img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/policy2-0x0.png"></div>
+				<div>Hỗ trợ 24/7<br>Hotline: 090.635.1080</div>
+			</div>	
+			<div class="flex_head">
+				<div><img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/policy3-0x0.png"></div>
+				<div>Giờ làm việc<br>6h00-22h00 (T2-CN)</div>
+			</div>
+			<button class="cart" onclick="indexToCart()"><i class="fas fa-shopping-bag"></i>Giỏ hàng(<span id="totalcart">0</span>)</button>
+		</div>
+	</div>
+	<div class="menubar">
+		<div class="flex_head">
+			<div style="align-items: center">
+				<ul>
+					<li><a href="#" onclick="cartToIndex()">Trang chủ</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="#">Sản phẩm</a></li>
+					<li><a href="#">Tin tức</a></li>
+					<li><a href="#">Liên hệ</a></li>
+				</ul>
+			</div>
+			<div class="search">
+				<input class="search_text" type="" name="" placeholder="   Tìm kiếm   " ><i class="fas fa-search"></i>
+			</div>
+		</div>
+	</div>
+	<div id="index">
+		<div class="flex_menu_img">
+			<div class="menu">
+				<span class="boder_menu">DANH MỤC SẢN PHẨM</span>
+				<ul>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> HẢI SẢN NHẬP KHẨU</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> HẢI SẢN TƯƠI</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> HOA QUẢ NHẬP KHẨU</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> RAU, CỦ SẠCH</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> THỊT TƯƠI</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> THỰC PHẨM ĐÔNG LẠNH</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> TRÁI CÂY TƯƠI</a></li>
+					<li><a href="#"> <i class="fas fa-arrow-circle-right"></i> ĐỒ UỐNG</a></li>
+				</ul>
+			</div>
+			<div class="img">
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2019/07/blog-featured_fruit-20180502-850x340.jpg">
+			</div>
+		</div>
+		<div class="bottom_menu">
+			<div class="flex">
+					<div class="boder_menu"><span style="font-size: 20px">Hoa quả nhập khẩu</span></div>
+					<div style="color: #DF7401">Xem thêm>></div>
+			</div>
+		</div>
+		<div class="contain">
+			<div class="flex_contain">
+				<span class="sell">20%</span>
+				<span><img id="img_1" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/nho.png"></span>
+				<span class="flex_contain">
+					<span id="name_1">Nho mỹ</span> 
+					<span style="color: #FACC2E">Giảm giá:120,000₫</span>
+					<span style="text-decoration: line-through"><span style="color: #D8D8D8">Giá bán: <span id="price_1">150000 đ</span></span></span>
+					<span class="flex_head">
+						 <button class="chitiet" onclick="window.location.href = 'detail.html';">Chi tiet</button>
+						 <button class="dathang"  onclick="cartfunction(1)">Đặt hàng</button>
+					</span>
+				</span>
+			</div>
+			<div class="flex_contain">
+				<span><img id="img_2" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/CC_Apple_withPLU-Stickers-300x300.png"></span>
+				<span class="price">
+					<span id="name_2">Táo mỹ</span> 
+					<span style="color: #FACC2E">Giá:<span id="price_2">150000 đ</span></span>
+					<span class="hang">
+						 <button class="chitiet" onclick="window.location.href = 'detail.html';">Chi tiet</button>
+						 <button class="dathang" onclick="cartfunction(2)" >Đặt hàng</button>
+					</span>
+				</span>
+			</div>
+			<div class="flex_contain">
+				<span><img id="img_3" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/17.5-fresh-fruit-3-300x300.png"></span>
+				<span class="price">
+					<span id="name_3">Cam mỹ</span> 
+					<span  style="color: #FACC2E">Giá:<span id="price_3">120000 đ</span>đ</span>
+					<span class="hang">
+						 <button class="chitiet" onclick="window.location.href = 'detail.html';">Chi tiet</button>
+						 <button class="dathang" onclick="cartfunction(3)">Đặt hàng</button>
+					</span>
+				</span>
+			</div>
+			<div class="flex_contain">
+				<span><img id="img_4" src="http://at01.chonweb.vn/wp-content/uploads/2019/07/banana__bigImage-300x300.png"></span>
+				<span class="price">
+					<span id="name_4">Chuối</span> 
+					<span style="color: #FACC2E">Giá:<span id="price_4">150000 đ</span></span>
+					<span class="hang">
+						 <button class="chitiet" onclick="window.location.href = 'detail.html';">Chi tiet</button>
+						 <button class="dathang" onclick="cartfunction(4)">Đặt hàng</button>
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="flex_img">
+			<span><img src="https://freshfood.exdomain.net/image/cache/catalog/banner/bn1-0x0.png"></span>
+			<span><img src="https://freshfood.exdomain.net/image/cache/catalog/banner/bn2-0x0.jpg"></span>		
+		</div>
+		<div class="line_border">
+	  		<span class="text_border">TIN TỨC</span>
+		</div>
+		<div class="contain_botton">
+			<div>
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/20171010133605-dua-luoi-nhat-ban-2-1507621497938.jpg">
+				<button class="button1">Xem them</button>
+			</div>
+			<div>
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/cherry-vang-my-62.jpg">
+				<button class="button1">Xem them</button>
+			</div>
+			<div>
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/rau-huu-co-480x274.jpg">
+				<button class="button1">Xem them</button>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="co_1">
+				<ul>
+					<li><a href="#" style="font-size: 25px">Liên hệ</a></li>
+					<li><a href="#"> <i style="color: #f99706" class="block_icon fa fa-map-marker"></i> Tòa nhà DTEC BUILDING - Số 6 Phan Chu Trinh,<br> P.Tân Thành, Q.Tân Phú, TP.HCM.</a></li>
+					<li><a href="#"><i style="color: #f99706" class="block_icon fa fa-phone"></i>  090.635.1080</a></li>
+					<li><a href="#"><i style="color: #f99706" class="block_icon fa fa-envelope"></i> dv@halink.vn</a></li>
+				</ul>
+			</div>
+			<div class="co_2">
+				<span><a href="#">THÔNG TIN</a></span>
+				<ul>
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="#">Sản phẩm</a></li>
+					<li><a href="#">Liên hệ</a></li>
+				</ul>
+			</div>
+			<div class="co_3">
+				<div>Facebook</div>
+			</div>
+		</div>
+		<div class="border_botton1">
+			<div class="border_botton1_left">© Copyright 2019 Thiết kế web Halink.vn - AT01.</div>
+		</div>
+	</div>
+	<div id="carts" style="display: none;">
+		<div class="flex_cart">
+			<div>Thiết kế web Halink.vn - AT01 > Giỏ hàng</div>
+			<div style="font-size: 30px">Giỏ hàng</div>
+			<div class="cart_top">
+				<div class="flex_cart1">
+					<div><i class="far fa-check-circle"></i>  “Nho mỹ” đã được thêm vào giỏ hàng.</div> 
+					<div><button class="btn_cart1" onclick="window.location.href = 'webhilink.html';">Tiếp xem thêm sản phẩm</div>
+				</div>
+			</div>
+		</div>
+		<div class="table">
+			<table id="myTable1" style="width: 100%">
+				<tr>
+					<th style="width: 80px"></th>
+					<th style="width: 100px"></th>	
+					<th style="width: 220px"><b>Sản phẩm</th>
+					<th style="width: 220px">Giá</th>
+					<th style="width: 220px">Số lượng</th>
+					<th>Tổng</th>
+				</tr>
+				<tr>
+					<td colspan="6">
+						<div class="flex">
+							<div>
+								<span class="box1">Mã giảm đãi</span>
+								Ưu đãi: <span class="box2">Áp dụng</span>
+							</div>
+							<div class="box1">Cập nhập giỏ hàng</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	<div>
+</body>
+</html>
